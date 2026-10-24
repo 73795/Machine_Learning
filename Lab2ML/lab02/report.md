@@ -1,24 +1,24 @@
-\# Lab 2 — Neural Network from Scratch
+﻿# Lab 2 — Neural Network from Scratch
 
 
 
-\## 1. Goal
+## 1. Goal
 
 
 
-The goal of this laboratory was to implement a neural network from scratch using NumPy. The network was used to classify handwritten digits from the `load\_digits` dataset. The experiments studied how hidden-layer width and learning rate affect training loss and test accuracy.
+The goal of this laboratory was to implement a neural network from scratch using NumPy. The network was used to classify handwritten digits from the `load_digits` dataset. The experiments studied how hidden-layer width and learning rate affect training loss and test accuracy.
 
 
 
-\## 2. Method
+## 2. Method
 
 
 
-\### Dataset and preprocessing
+### Dataset and preprocessing
 
 
 
-The experiment used the handwritten digits dataset from `sklearn.datasets.load\_digits`. Each image contains 8 × 8 pixels, represented by 64 input features.
+The experiment used the handwritten digits dataset from `sklearn.datasets.load_digits`. Each image contains 8 × 8 pixels, represented by 64 input features.
 
 
 
@@ -26,11 +26,11 @@ The pixel values were divided by 16 to normalize them. The labels were converted
 
 
 
-The dataset was divided into training and testing sets using a stratified 70/30 split with `random\_state=42`.
+The dataset was divided into training and testing sets using a stratified 70/30 split with `random_state=42`.
 
 
 
-\### Neural network architecture
+### Neural network architecture
 
 
 
@@ -42,13 +42,13 @@ The architecture was:
 
 
 
-\- Input layer: 64 features
+- Input layer: 64 features
 
-\- First hidden layer: W neurons with ReLU activation
+- First hidden layer: W neurons with ReLU activation
 
-\- Second hidden layer: W neurons with ReLU activation
+- Second hidden layer: W neurons with ReLU activation
 
-\- Output layer: 10 neurons with softmax activation
+- Output layer: 10 neurons with softmax activation
 
 
 
@@ -68,7 +68,7 @@ Gradient checking was used to compare analytical gradients with numerical gradie
 
 
 
-\## 3. Results
+## 3. Results
 
 
 
@@ -102,11 +102,11 @@ For learning rates of 0.001 and 0.01, the final loss remained close to 2.3026, a
 
 
 
-The loss curves were saved in `results/loss\_curves.png`, and the numerical results were saved in `results/training\_results.csv`.
+The loss curves were saved in `results/loss_curves.png`, and the numerical results were saved in `results/training_results.csv`.
 
 
 
-\## 4. Discussion
+## 4. Discussion
 
 
 
@@ -126,31 +126,32 @@ The loss curves help show how the models learned over time. The CSV file allows 
 
 
 
-\## 5. Conclusions
+## 5. Conclusions
 
 
 
-1\. A neural network for handwritten digit classification was implemented using NumPy.
+1. A neural network for handwritten digit classification was implemented using NumPy.
 
-2\. The dataset was normalized and split into training and testing sets.
+2. The dataset was normalized and split into training and testing sets.
 
-3\. Six configurations were tested using two hidden-layer widths and three learning rates.
+3. Six configurations were tested using two hidden-layer widths and three learning rates.
 
-4\. Learning rates of 0.001 and 0.01 did not produce effective learning within 50 epochs in these experiments.
+4. Learning rates of 0.001 and 0.01 did not produce effective learning within 50 epochs in these experiments.
 
-5\. The best configuration used a hidden-layer width of 64 and a learning rate of 0.1, achieving 93.89% test accuracy.
+5. The best configuration used a hidden-layer width of 64 and a learning rate of 0.1, achieving 93.89% test accuracy.
 
-6\. Both network architecture and learning rate are important for neural network performance.
-
-
-
-\## 6. Files
+6. Both network architecture and learning rate are important for neural network performance.
 
 
 
-\- `main.py` — neural network implementation and experiments.
+## 6. Files
 
-\- `results/training\_results.csv` — numerical results for all configurations.
 
-\- `results/loss\_curves.png` — training loss curves.
+
+- `main.py` — neural network implementation and experiments.
+
+- `results/training_results.csv` — numerical results for all configurations.
+
+- `results/loss_curves.png` — training loss curves.
+
 
