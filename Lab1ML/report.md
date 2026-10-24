@@ -1,8 +1,8 @@
-\# Lab 1 — Baseline Models and System Cost
+﻿# Lab 1 - Baseline Models and System Cost
 
 
 
-\## 1. Goal
+## 1. Goal
 
 
 
@@ -10,7 +10,7 @@ The goal of this laboratory was to train baseline machine learning models and me
 
 
 
-\## 2. Method
+## 2. Method
 
 
 
@@ -18,7 +18,7 @@ The Breast Cancer Wisconsin (Diagnostic) dataset from scikit-learn was used.
 
 
 
-The dataset was split into training and test sets using a 70/30 split. Stratification and `random\_state=42` were used to make the split reproducible.
+The dataset was split into training and test sets using a 70/30 split. Stratification and `random_state=42` were used to make the split reproducible.
 
 
 
@@ -26,9 +26,9 @@ Two classification models were trained:
 
 
 
-\- Logistic Regression with `max\_iter=1000` and `random\_state=42`.
+- Logistic Regression with `max_iter=1000` and `random_state=42`.
 
-\- Random Forest with `n\_estimators=100` and `random\_state=42`.
+- Random Forest with `n_estimators=100` and `random_state=42`.
 
 
 
@@ -44,11 +44,11 @@ Both trained models were saved using joblib. Their saved file sizes were measure
 
 
 
-\## 3. Results
+## 3. Results
 
 
 
-\### 3.1. Model accuracy
+### 3.1. Model accuracy
 
 
 
@@ -62,7 +62,7 @@ Both trained models were saved using joblib. Their saved file sizes were measure
 
 
 
-\### 3.2. System cost measurements
+### 3.2. System cost measurements
 
 
 
@@ -80,7 +80,7 @@ The process memory values represent RSS at the time of measurement. They include
 
 
 
-\### 3.3. Deployment suitability
+### 3.3. Deployment suitability
 
 
 
@@ -90,9 +90,9 @@ The process memory values represent RSS at the time of measurement. They include
 
 | Cloud | At least 1 GB available | 100 ms | 500 MB | Suitable | Suitable |
 
-| Edge | 256–1024 MB available | 50 ms | 50 MB | Suitable | Suitable |
+| Edge | 256-1024 MB available | 50 ms | 50 MB | Suitable | Suitable |
 
-| Mobile | 64–256 MB available | 20 ms | 10 MB | Suitable | Suitable |
+| Mobile | 64-256 MB available | 20 ms | 10 MB | Suitable | Suitable |
 
 | TinyML | Maximum 256 KB | 10 ms | 100 KB | Not suitable by measured process memory | Not suitable |
 
@@ -106,19 +106,22 @@ Neither model is suitable for TinyML based on the measured process memory. The R
 
 
 
-\## 4. Conclusions
+## 4. Conclusions
 
 
 
-1\. Logistic Regression achieved slightly higher test accuracy than Random Forest: 0.9415 compared with 0.9357.
+1. Logistic Regression achieved slightly higher test accuracy than Random Forest: 0.9415 compared with 0.9357.
 
 
 
-2\. Random Forest trained faster, with a median training time of 0.299318 seconds. Logistic Regression had much lower inference latency and a smaller saved model, making it more efficient when fast predictions and low storage requirements are important.
+2. Random Forest trained faster, with a median training time of 0.299318 seconds. Logistic Regression had much lower inference latency and a smaller saved model, making it more efficient when fast predictions and low storage requirements are important.
 
 
 
-3\. Both models meet the stated latency and model-size limits for Cloud, Edge, and Mobile deployment, subject to the memory available on the target device. TinyML deployment is not suitable under the measured process-memory budget.
+3. Both models meet the stated latency and model-size limits for Cloud, Edge, and Mobile deployment, subject to the memory available on the target device. TinyML deployment is not suitable under the measured process-memory budget.
+
+
+
 
 
 
