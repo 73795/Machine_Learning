@@ -53,11 +53,8 @@ Both trained models were saved using joblib. Their saved file sizes were measure
 
 
 | Model | Test Accuracy |
-
 |---|---:|
-
 | Logistic Regression | 0.9415 |
-
 | Random Forest | 0.9357 |
 
 
@@ -67,11 +64,8 @@ Both trained models were saved using joblib. Their saved file sizes were measure
 
 
 | Model | Median Training Time (s) | Median Inference Latency (ms) | Model Size (KB) | Process Memory (KB) |
-
 |---|---:|---:|---:|---:|
-
 | Logistic Regression | 0.851300 | 0.084200 | 1.03 | 107596.00 |
-
 | Random Forest | 0.299318 | 4.476950 | 284.07 | 108896.00 |
 
 
@@ -85,15 +79,10 @@ The process memory values represent RSS at the time of measurement. They include
 
 
 | Deployment | Memory Budget | Maximum Latency | Maximum Model Size | Logistic Regression | Random Forest |
-
 |---|---|---|---|---|---|
-
 | Cloud | At least 1 GB available | 100 ms | 500 MB | Suitable | Suitable |
-
 | Edge | 256-1024 MB available | 50 ms | 50 MB | Suitable | Suitable |
-
 | Mobile | 64-256 MB available | 20 ms | 10 MB | Suitable | Suitable |
-
 | TinyML | Maximum 256 KB | 10 ms | 100 KB | Not suitable by measured process memory | Not suitable |
 
 
@@ -119,6 +108,7 @@ Neither model is suitable for TinyML based on the measured process memory. The R
 
 
 3. Both models meet the stated latency and model-size limits for Cloud, Edge, and Mobile deployment, subject to the memory available on the target device. TinyML deployment is not suitable under the measured process-memory budget.
+
 
 
 
