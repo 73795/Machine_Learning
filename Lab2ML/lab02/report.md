@@ -77,19 +77,12 @@ The experiment compared six configurations. The results are presented in Table 1
 
 
 | Hidden width | Learning rate | Final training loss | Test accuracy |
-
 |---:|---:|---:|---:|
-
 | 16 | 0.001 | 2.30255 | 10.19% |
-
 | 16 | 0.01 | 2.30248 | 10.19% |
-
 | 16 | 0.1 | 1.59702 | 32.59% |
-
 | 64 | 0.001 | 2.30253 | 10.19% |
-
 | 64 | 0.01 | 2.30234 | 10.19% |
-
 | 64 | 0.1 | 0.16840 | 93.89% |
 
 
@@ -153,5 +146,7 @@ The loss curves help show how the models learned over time. The CSV file allows 
 - `results/training_results.csv` — numerical results for all configurations.
 
 - `results/loss_curves.png` — training loss curves.
+
+
 
 
