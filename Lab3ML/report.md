@@ -1,1 +1,3 @@
-![Training results](results/calculation.jpg)
+﻿### Handwritten Solution
+
+![Handwritten solution](images/calculation.jpg)
