@@ -1,0 +1,7 @@
+Rows: 48842
+Columns: 15
+
+Missing values: 0
+No validation errors found
+
+Conflicting duplicates: 5

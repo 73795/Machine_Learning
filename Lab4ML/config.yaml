@@ -1,0 +1,11 @@
+dataset: adult
+test_size: 0.3
+random_state: 42
+
+numeric_imputer: median
+categorical_imputer: most_frequent
+
+outlier_lower: 0.01
+outlier_upper: 0.99
+
+model: LogisticRegression
